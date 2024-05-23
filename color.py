@@ -10,6 +10,7 @@ class Color:
     self.g = g
     self.b = b
 
+
   def black(self):
     self.set(0,0,0)
 
@@ -17,11 +18,6 @@ class Color:
     self.set(255,255,255)
 
 
-
-# POD_OFF = 0
-# POD_FADE_IN = 1
-# POD_ON = 2
-# POD_FADE_OUT = 3
 
 
 class FadingColor:
@@ -54,7 +50,7 @@ class FadingColor:
   def update(self):
     # if self.bIsTweening == True:
       self.currentColor.set(self.targetColor.r * self.tweenValue, self.targetColor.g * self.tweenValue, self.targetColor.b * self.tweenValue)
-      print ("  " + str(self.tweenValue) + " " + str(vars(self.currentColor)))
+      # print ("  " + str(self.tweenValue) + " " + str(vars(self.currentColor)))
       
 
   def __startFading(self):
