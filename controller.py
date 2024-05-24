@@ -132,21 +132,26 @@ loadControllers(loadpath)
 # 		for pod in strand:
 # 			pod.blink(10, 4, 10)
 
+# for()
+
 
 chain0 = PodAnimationChain(strands[0])
 chain1 = PodAnimationChain(strands[1])
 chain2 = PodAnimationChain(strands[2])
-
-
-l = chain0.getLast()
-if l is not None:
-	l.setNextAnimation([chain1, chain2])
-
-print(chain0.getAsString())
-
-
-
+chain3 = PodAnimationChain(strands[3])
 chain0.start()
+chain1.start()
+chain2.start()
+chain3.start()
+
+# l = chain0.getLast()
+# if l is not None:
+# 	l.setNextAnimation([chain1, chain2])
+
+# print(chain0.getAsString())
+
+
+
 
 
 
