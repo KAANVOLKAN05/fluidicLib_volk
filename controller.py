@@ -122,8 +122,8 @@ def update():
 
 
 
-loadpath ="./final_fixture_description_localhost.json"
-# loadpath ="./final_fixture_description.json"
+# loadpath ="./final_fixture_description_localhost.json"
+loadpath ="./final_fixture_description.json"
 loadPods(loadpath)
 leds = loadLeds(loadpath)
 strands = loadPods(loadpath)
