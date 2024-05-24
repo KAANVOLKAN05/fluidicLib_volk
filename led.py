@@ -21,13 +21,13 @@ class LED:
 		self.color.set(c.r, c.g, c.b)
 
 
-def typeToSize(type:str):
-	if type == "8_LED_ring":
+def typeToSize(ledType:str):
+	if ledType == "8_LED_ring":
 		return 8
-	elif type == "12_LED_ring":
+	elif ledType == "12_LED_ring":
 		return 12
 	else:
-		print("typeToSize() failed . passed: " + type)
+		print("typeToSize() failed . passed: " + ledType)
 	return 0
 
 def loadLeds(loadPath):

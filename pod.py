@@ -12,9 +12,9 @@ POD_TYPE_POD = 2
 
 
 class Pod:
-  def __init__(self, name:str, color: Color, type:int, ledIDs:list[int]):
+  def __init__(self, name:str, color: Color, podType:int, ledIDs:list[int]):
     self.name = name
-    self.type = type
+    self.podType = podType
     self.color = FadingColor(color)
     self.ledIDs = ledIDs
     
@@ -29,13 +29,13 @@ class Pod:
 
 
 
-def toPodType(type:str):
-  if type == "pod":
+def toPodType(podType:str):
+  if podType == "pod":
     return POD_TYPE_POD
-  elif type == "flower":
+  elif podType == "flower":
     return POD_TYPE_FLOWER
   else:
-    print("toPodType(type:str)  failed. passed " + type)
+    print("toPodType(type:str)  failed. passed " + podType)
     return 0
 
 def loadPods(loadPath):
