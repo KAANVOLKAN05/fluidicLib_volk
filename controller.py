@@ -4,7 +4,8 @@ from helpers import *
 from stupidArtnet import StupidArtnet
 import json
 from led import *
-import random
+from animation import *
+
 
 
 artnet = {}
@@ -117,7 +118,7 @@ last_update_time = time.time()
 
 def updateLedsColors():
 	for strand in strands:
-		for pod in strand:strands: []
+		for pod in strand:
 			for i in pod.ledIDs:
 				leds[i].setColor(pod.color.get())
 
@@ -153,11 +154,30 @@ def update():
 loadpath ="/Users/roy/Desktop/PROYECTOS/AGNES_CHAVEZ/fluidic-code/artnet/stupidArtnet/final_fixture_description_localhost.json"
 loadPods(loadpath)
 leds = loadLeds(loadpath)
-strands = loadControllers(loadpath)
+strands = loadPods(loadpath)
+loadControllers(loadpath)
 
-for strand in strands:
-		for pod in strstrands: []and:
-			pod.blink(10, 4, 10)
+# for strand in strands:
+# 		for pod in strand:
+# 			pod.blink(10, 4, 10)
+
+
+chain0 = PodAnimationChain(strands[0])
+chain1 = PodAnimationChain(strands[1])
+chain2 = PodAnimationChain(strands[2])
+
+
+l = chain0.getLast()
+if l is not None:
+	l.setNextAnimation([chain1, chain2])
+
+print(chain0.getAsString())
+
+
+
+chain0.start()
+
+
 
 # start()
 
