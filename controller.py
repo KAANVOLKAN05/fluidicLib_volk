@@ -86,34 +86,6 @@ def loadControllers(loadPath):
 	f.close()
 
 
-
-	# print (artnet)
-
-
-# def toPodType(type:str):
-# 	if type == "pod":
-# 		return POD_TYPE_POD
-# 	elif type == "flower":
-# 		return POD_TYPE_FLOWER
-# 	else:
-# 		print("toPodType(type:str)  failed. passed " + type)
-# 		return 0
-
-# def loadPods(loadPath):
-# 	f = open(loadPath)
-# 	j_data = json.load(f)
-# 	for comp in j_data['InstallationComponents']:
-# 		ind = comp["groupID"]
-# 		strands[ind] = [i for i in range(len(comp["fixtures"]))]
-# 		for pod in strands[ind []comp["fixtures"]:
-# 			# Pod( name:str, color: Color, type:int, ledIDs:list[int]):
-
-# 			strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], Color(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), toPodType(pod["fixtureType"]), pod["LEDs"])
-# 		# leds[led["LEDstrands[ind []GroupID"]] = LED(led["LedIDs"][0], typeToSize(led["type"]), led["universe"], led["controllerID"])
-# 	f.close()
-
-
-
 last_update_time = time.time()
 
 def updateLedsColors():
@@ -145,8 +117,6 @@ def update():
 	tween.update(dt)
 	updateLedsColors()
 	updateArtnet()
-	# for k in artnet.keys():
-	# 	artnet[k].printBuffers()
     
 
 
