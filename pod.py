@@ -4,7 +4,7 @@ from color import *
 import json
 import random
 
-BLINK_DEFAULT_ON_DURATION = 0.0
+BLINK_DEFAULT_ON_DURATION = 4.0
 BLINK_DEFAULT_FADE_DURATION = 2.0
 
 POD_TYPE_FLOWER = 1
