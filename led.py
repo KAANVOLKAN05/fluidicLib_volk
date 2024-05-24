@@ -13,8 +13,8 @@ class LED:
 
 	def updateData(self, data):
 		for i in range(self.size):
-			data[self.startIndex + (i*3)] = round(self.color.r)
-			data[self.startIndex + (i*3) + 1] = round(self.color.g)
+			data[self.startIndex + (i*3)] = round(self.color.g)
+			data[self.startIndex + (i*3) + 1] = round(self.color.r)
 			data[self.startIndex + (i*3) + 2] = round(self.color.b)
 
 	def setColor(self, c:Color):
