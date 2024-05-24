@@ -2,11 +2,13 @@ from pod import *
 
 
 class PodAnimationChain:
-	def __init__(self, elementsToChain:list):
+	def __init__(self, elementsToChain:list,  fadeInDuration = BLINK_DEFAULT_FADE_IN_DURATION, onDuration = BLINK_DEFAULT_ON_DURATION, fadeOutDuration = BLINK_DEFAULT_FADE_OUT_DURATION, startDelay = 0.0):
 		# self.__elementsToChain = elementsToChain
 		self.__chain = []
+
+
 		for element in elementsToChain:
-			self.append(element)
+			self.append(element, fadeInDuration, onDuration, fadeOutDuration , startDelay)
 			
 
 		# for i in range(len(self.__chain)):
@@ -19,9 +21,9 @@ class PodAnimationChain:
 		if n > 0 :
 			self.__chain[n-1].setNextAnimation(self.__chain[n])
 
-	def append(self, element):
+	def append(self, element,  fadeInDuration = BLINK_DEFAULT_FADE_IN_DURATION, onDuration = BLINK_DEFAULT_ON_DURATION, fadeOutDuration = BLINK_DEFAULT_FADE_OUT_DURATION, startDelay = 0.0):
 		if isinstance(element, Pod):
-			self.__chain.append(PodAnimation(element))
+			self.__chain.append(PodAnimation(element, fadeInDuration, onDuration, fadeOutDuration , startDelay))
 			self.__setNextForLast()
 		elif isinstance(element, PodAnimation):
 			self.__chain.append(element)
@@ -61,6 +63,7 @@ class PodAnimation:
 		self.startDelay = startDelay
 		self.__repeat = 0
 		self.__repeatCounter = 0
+		self.__onEndCallbacks = []
 
 	def setNextAnimation(self, nextAnimations):
 		self.nextAnimations = nextAnimations
@@ -110,8 +113,15 @@ class PodAnimation:
 		print("PodAnimation %s blink" % (self.pod.name))
 		self.pod.blink(self.fadeInDuration, self.onDuration, self.fadeOutDuration, self.startDelay , self.onEndCallback)
 
+	def onEnd(self, callback):
+		self.__onEndCallbacks.append(callback)
+
 	def onEndCallback(self):
 		self.__tryRepeat()
+
+		for c in self.__onEndCallbacks:
+			if(callable(c)):
+				c()
 
 		if type(self.nextAnimations) is None:
 			return
