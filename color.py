@@ -22,7 +22,7 @@ class Color:
 
 class FadingColor:
   def __init__(self, color: Color):
-    self.targetColor = color
+    self.targetColor = Color(color.r, color.g, color.b)
     self.currentColor = Color()
     self.color_tween = {}
     self.__onDuration = 0.0
@@ -42,7 +42,7 @@ class FadingColor:
 
   def setOn(self):
     # self.bIsTweening = False
-    self.currentColor = self.targetColor
+    # self.currentColor = self.targetColor
     self.tweenValue = 1.0
     
   def setOnWhite(self):
@@ -52,7 +52,7 @@ class FadingColor:
   def update(self):
     # if self.bIsTweening == True:
       self.currentColor.set(self.targetColor.r * self.tweenValue, self.targetColor.g * self.tweenValue, self.targetColor.b * self.tweenValue)
-      # print ("  " + str(self.tweenValue) + " " + str(vars(self.currentColor)))
+      # print ("  " + str(self.tweenValue) + " " + str(vars(self.currentColor))+ " " + str(vars(self.targetColor)))
       
 
   def __startFading(self):
@@ -60,12 +60,14 @@ class FadingColor:
     # self.bIsTweening = True
 
   def __fadeOutEnd(self):
-    self.setOff()
+    self.tweenValue = 0.0
+    # self.setOff()
     if callable(self.__onEndCallback):
       self.__onEndCallback()
 
   def __fadeInEnd(self):
-    self.setOn()
+    # self.setOn()
+    self.tweenValue = 1.0
     self.__setTween(0.0, self.__fadeOutDuration, self.__onDuration, self.__startFading, self.__fadeOutEnd)
 
     # self.color_tween = tween.to(self, "tweenValue", 0.0, self.fadeOutDuration, "easeInOutQuad", self.onDuration);
