@@ -1,9 +1,11 @@
 
 from color import *
 
+import json
+import random
 
-
-BLINK_DEFAULT_DURATION = 4.0
+BLINK_DEFAULT_ON_DURATION = 0.5
+BLINK_DEFAULT_FADE_DURATION = 0.5
 
 POD_TYPE_FLOWER = 1
 POD_TYPE_POD = 2
@@ -22,9 +24,8 @@ class Pod:
   def setOn(self):
     self.color.setOn()
 
-  def blink(self, fadeInDuration:float = BLINK_DEFAULT_DURATION, onDuration:float = BLINK_DEFAULT_DURATION, fadeOutDuration:float = BLINK_DEFAULT_DURATION, startDelay = 0.0):
-    self.color.fadeInOut(fadeInDuration, onDuration, fadeOutDuration, startDelay)
-
+  def blink(self, fadeInDuration:float = BLINK_DEFAULT_FADE_DURATION, onDuration:float = BLINK_DEFAULT_ON_DURATION, fadeOutDuration:float = BLINK_DEFAULT_FADE_DURATION, startDelay = 0.0, onEndCallback = None):
+    self.color.fadeInOut(fadeInDuration, onDuration, fadeOutDuration, startDelay, onEndCallback)
 
 
 
