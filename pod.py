@@ -46,7 +46,7 @@ def loadPods(loadPath):
     ind = comp["groupID"]
     strands[ind] = [i for i in range(len(comp["fixtures"]))]
     for pod in comp["fixtures"]:
-      strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], Color(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), toPodType(pod["fixtureType"]), pod["LEDs"])
+      strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], Color(random.randint(0, 255), 255, 255), toPodType(pod["fixtureType"]), pod["LEDs"])
     # leds[led["LEDGroupID"]] = LED(led["LedIDs"][0], typeToSize(led["type"]), led["universe"], led["controllerID"])
   f.close()
   return strands
