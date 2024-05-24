@@ -144,11 +144,15 @@ loadControllers(loadpath)
 # chain2.start()
 # chain3.start()
 
+podAnimations = []
+
 for s in strands:
 	for p in s:
 		# p.setOn()
-		p.setOnWhite()
-
+		# p.setOnWhite()
+		podAnimations.append(PodAnimation(p));
+		podAnimations[len(podAnimations) -1].repeatInfinite()
+		podAnimations[len(podAnimations) -1].start()
 
 # l = chain0.getLast()
 # if l is not None:
