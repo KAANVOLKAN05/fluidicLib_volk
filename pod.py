@@ -27,6 +27,8 @@ class Pod:
   def blink(self, fadeInDuration:float = BLINK_DEFAULT_FADE_DURATION, onDuration:float = BLINK_DEFAULT_ON_DURATION, fadeOutDuration:float = BLINK_DEFAULT_FADE_DURATION, startDelay = 0.0, onEndCallback = None):
     self.color.fadeInOut(fadeInDuration, onDuration, fadeOutDuration, startDelay, onEndCallback)
 
+  def setOnWhite(self):
+    self.color.setOnWhite()
 
 
 def toPodType(podType:str):
@@ -46,7 +48,10 @@ def loadPods(loadPath):
     ind = comp["groupID"]
     strands[ind] = [i for i in range(len(comp["fixtures"]))]
     for pod in comp["fixtures"]:
-      strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], Color(random.randint(0, 255), 255, 255), toPodType(pod["fixtureType"]), pod["LEDs"])
+      # Color(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+      c = i%3
+
+      strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], Color(255 if c == 0 else 0, 255 if c == 1 else 0, 255 if c == 2 else 0), toPodType(pod["fixtureType"]), pod["LEDs"])
     # leds[led["LEDGroupID"]] = LED(led["LedIDs"][0], typeToSize(led["type"]), led["universe"], led["controllerID"])
   f.close()
   return strands

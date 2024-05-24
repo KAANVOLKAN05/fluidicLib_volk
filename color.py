@@ -47,6 +47,7 @@ class FadingColor:
     
   def setOnWhite(self):
     self.currentColor.white()
+    self.tweenValue = 1.0
 
   def update(self):
     # if self.bIsTweening == True:
