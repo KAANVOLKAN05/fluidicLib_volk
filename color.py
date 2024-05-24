@@ -28,6 +28,7 @@ class FadingColor:
     self.__onDuration = 0.0
     self.__fadeOutDuration = 0.0
     self.tweenValue = 0.0
+    self.__onEndCallback = None
 
   def get(self):
     return self.currentColor
@@ -57,9 +58,14 @@ class FadingColor:
     pass
     # self.bIsTweening = True
 
+  def __fadeOutEnd(self):
+    self.setOff()
+    if callable(self.__onEndCallback):
+      self.__onEndCallback()
+
   def __fadeInEnd(self):
     self.setOn()
-    self.__setTween(0.0, self.__fadeOutDuration, self.__onDuration, self.__startFading, self.setOff)
+    self.__setTween(0.0, self.__fadeOutDuration, self.__onDuration, self.__startFading, self.__fadeOutEnd)
 
     # self.color_tween = tween.to(self, "tweenValue", 0.0, self.fadeOutDuration, "easeInOutQuad", self.onDuration);
     # self.color_tween.on_update(self.update)
@@ -74,10 +80,10 @@ class FadingColor:
 
 
 
-  def fadeInOut(self, fadeInDuration:float, onDuration:float, fadeOutDuration:float, startDelay = 0.0):
+  def fadeInOut(self, fadeInDuration:float, onDuration:float, fadeOutDuration:float, startDelay = 0.0, onEndCallback = None):
     # "x", 400, 5.0, "easeInOutQuad"
     # self.tweenStartTime = time.time()
-
+    self.__onEndCallback = onEndCallback
     # self.fadeInDuration = fadeInDuration
     self.__onDuration = onDuration
     self.__fadeOutDuration = fadeOutDuration
