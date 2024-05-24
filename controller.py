@@ -140,22 +140,37 @@ loadControllers(loadpath)
 # 		# podAnimations[len(podAnimations) -1].repeatInfinite()
 # 	podAnimations[len(podAnimations) -1].start()
 
+def turnOnStrand(strand):
+	for p in strand:
+		p.setOn()
 
 
-chain0 = PodAnimationChain(strands[0])
+# for s in strands:
+# 	for p in s:
+# 		p.setOn()
+
+
+turnOnStrand(strands[0])
+# turnOnStrand(strands[1])
+turnOnStrand(strands[2])
+turnOnStrand(strands[3])
+ # chain0 = PodAnimationChain(strands[0])
 chain1 = PodAnimationChain(strands[1])
-chain2 = PodAnimationChain(strands[2])
-chain3 = PodAnimationChain(strands[3])
-chain0.start()
+# chain2 = PodAnimationChain(strands[2])
+# chain3 = PodAnimationChain(strands[3])
+# chain0.start()
+chain1.repeatInfinite()
 chain1.start()
-chain2.start()
-chain3.start()
+
+
+# chain2.start()
+# chain3.start()
 
 
 
 # for s in strands:
 # 	for p in s:
-# 		# p.setOn()
+# 		p.setOn()
 # #		# p.setOnWhite()
 # 		podAnimations.append(PodAnimation(p));
 # 		podAnimations[len(podAnimations) -1].repeatInfinite()
