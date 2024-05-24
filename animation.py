@@ -44,7 +44,11 @@ class PodAnimationChain:
 			return self.__chain[n - 1]
 		return None
 
-
+	def repeatInfinite(self):
+		n = len(self.__chain)
+		if n > 1 :
+			return self.__chain[n - 1].setNextAnimation(self.__chain[0])
+		
 
 
 
@@ -104,7 +108,7 @@ class PodAnimation:
 
 
 	def __blink(self):
-		print("PodAnimation %s blink" % (self.pod.name))
+		# print("PodAnimation %s blink" % (self.pod.name))
 		self.pod.blink(self.fadeInDuration, self.onDuration, self.fadeOutDuration, self.startDelay , self.onEndCallback)
 
 	def onEndCallback(self):
