@@ -121,7 +121,8 @@ def update():
 
 
 
-loadpath ="/Users/roy/Desktop/PROYECTOS/AGNES_CHAVEZ/fluidic-code/artnet/stupidArtnet/final_fixture_description_localhost.json"
+# loadpath ="./final_fixture_description_localhost.json"
+loadpath ="./final_fixture_description.json"
 loadPods(loadpath)
 leds = loadLeds(loadpath)
 strands = loadPods(loadpath)

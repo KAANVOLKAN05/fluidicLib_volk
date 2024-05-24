@@ -45,6 +45,8 @@ def loadLeds(loadPath):
 
 if __name__ == "__main__":
 
-	loadLeds("/Users/roy/Desktop/PROYECTOS/AGNES_CHAVEZ/fluidic-code/artnet/stupidArtnet/final_fixture_description.json")
+	loadLeds("./final_fixture_description.json")
+	# loadpath ="./final_fixture_description_localhost.json"
+
 
     
