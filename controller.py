@@ -146,7 +146,8 @@ loadControllers(loadpath)
 
 for s in strands:
 	for p in s:
-		p.setOn()
+		# p.setOn()
+		p.setOnWhite()
 
 
 # l = chain0.getLast()
