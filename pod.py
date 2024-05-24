@@ -4,8 +4,9 @@ from color import *
 import json
 import random
 
-BLINK_DEFAULT_ON_DURATION = 4.0
-BLINK_DEFAULT_FADE_DURATION = 2.0
+BLINK_DEFAULT_ON_DURATION = 0.0
+BLINK_DEFAULT_FADE_IN_DURATION = 3.0
+BLINK_DEFAULT_FADE_OUT_DURATION = 0.1
 
 POD_TYPE_FLOWER = 1
 POD_TYPE_POD = 2
@@ -24,7 +25,7 @@ class Pod:
   def setOn(self):
     self.color.setOn()
 
-  def blink(self, fadeInDuration:float = BLINK_DEFAULT_FADE_DURATION, onDuration:float = BLINK_DEFAULT_ON_DURATION, fadeOutDuration:float = BLINK_DEFAULT_FADE_DURATION, startDelay = 0.0, onEndCallback = None):
+  def blink(self, fadeInDuration:float = BLINK_DEFAULT_FADE_IN_DURATION, onDuration:float = BLINK_DEFAULT_ON_DURATION, fadeOutDuration:float = BLINK_DEFAULT_FADE_OUT_DURATION, startDelay = 0.0, onEndCallback = None):
     self.color.fadeInOut(fadeInDuration, onDuration, fadeOutDuration, startDelay, onEndCallback)
 
   def setOnWhite(self):
@@ -53,7 +54,17 @@ def loadPods(loadPath):
       c = i%3
       i+=1
       # Color(255 if c == 0 else 0, 255 if c == 1 else 0, 255 if c == 2 else 0)
-      strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], Color(0,0,255), toPodType(pod["fixtureType"]), pod["LEDs"])
+      color = Color()
+      if(ind == 0):
+        color.set(255,0,255)#magenta
+      elif ind == 1:
+        color.set(0,0,255)#blue
+      elif ind == 2:
+        color.set(0,255,0)#green
+      elif ind == 3:
+        color.set(255,255,0)#yellow
+      
+      strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], color, toPodType(pod["fixtureType"]), pod["LEDs"])
     # leds[led["LEDGroupID"]] = LED(led["LedIDs"][0], typeToSize(led["type"]), led["universe"], led["controllerID"])
   f.close()
   return strands
