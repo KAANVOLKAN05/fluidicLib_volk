@@ -12,7 +12,7 @@ POD_TYPE_POD = 2
 
 
 class Pod:
-  def __init__(self, name:str, color: Color, podType:int, ledIDs:list[int]):
+  def __init__(self, name:str, color: Color, podType:int, ledIDs:list):
     self.name = name
     self.podType = podType
     self.color = FadingColor(color)
