@@ -142,24 +142,24 @@ loadControllers(loadpath)
 
 
 
-# chain0 = PodAnimationChain(strands[0])
-# chain1 = PodAnimationChain(strands[1])
-# chain2 = PodAnimationChain(strands[2])
-# chain3 = PodAnimationChain(strands[3])
-# chain0.start()
-# chain1.start()
-# chain2.start()
-# chain3.start()
+chain0 = PodAnimationChain(strands[0])
+chain1 = PodAnimationChain(strands[1])
+chain2 = PodAnimationChain(strands[2])
+chain3 = PodAnimationChain(strands[3])
+chain0.start()
+chain1.start()
+chain2.start()
+chain3.start()
 
 
 
-for s in strands:
-	for p in s:
-		# p.setOn()
-#		# p.setOnWhite()
-		podAnimations.append(PodAnimation(p));
-		podAnimations[len(podAnimations) -1].repeatInfinite()
-		podAnimations[len(podAnimations) -1].start()
+# for s in strands:
+# 	for p in s:
+# 		# p.setOn()
+# #		# p.setOnWhite()
+# 		podAnimations.append(PodAnimation(p));
+# 		podAnimations[len(podAnimations) -1].repeatInfinite()
+# 		podAnimations[len(podAnimations) -1].start()
 
 # l = chain0.getLast()
 # if l is not None:
