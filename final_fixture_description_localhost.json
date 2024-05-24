@@ -565,8 +565,8 @@
     "LEDDevices": [
         {
             "LEDGroupID": 0,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 0,
@@ -597,8 +597,8 @@
         },
         {
             "LEDGroupID": 1,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 24,
@@ -629,8 +629,8 @@
         },
         {
             "LEDGroupID": 2,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 48,
@@ -661,8 +661,8 @@
         },
         {
             "LEDGroupID": 3,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 72,
@@ -693,8 +693,8 @@
         },
         {
             "LEDGroupID": 4,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 96,
@@ -725,8 +725,8 @@
         },
         {
             "LEDGroupID": 5,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 120,
@@ -757,8 +757,8 @@
         },
         {
             "LEDGroupID": 6,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 144,
@@ -789,8 +789,8 @@
         },
         {
             "LEDGroupID": 7,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 168,
@@ -821,8 +821,8 @@
         },
         {
             "LEDGroupID": 8,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 192,
@@ -853,8 +853,8 @@
         },
         {
             "LEDGroupID": 9,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 216,
@@ -885,8 +885,8 @@
         },
         {
             "LEDGroupID": 10,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 240,
@@ -917,8 +917,8 @@
         },
         {
             "LEDGroupID": 11,
-            "controllerID": 3,
-            "universe": 0,
+            "controllerID": 1,
+            "universe": 6,
             "type": "8_LED_ring",
             "LedIDs": [
                 264,
@@ -1341,8 +1341,8 @@
         },
         {
             "LEDGroupID": 22,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 0,
@@ -1373,8 +1373,8 @@
         },
         {
             "LEDGroupID": 23,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 24,
@@ -1405,8 +1405,8 @@
         },
         {
             "LEDGroupID": 24,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 48,
@@ -1437,8 +1437,8 @@
         },
         {
             "LEDGroupID": 25,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 72,
@@ -1469,8 +1469,8 @@
         },
         {
             "LEDGroupID": 26,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 96,
@@ -1501,8 +1501,8 @@
         },
         {
             "LEDGroupID": 27,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 120,
@@ -1533,8 +1533,8 @@
         },
         {
             "LEDGroupID": 28,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 144,
@@ -1565,8 +1565,8 @@
         },
         {
             "LEDGroupID": 29,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 168,
@@ -1597,8 +1597,8 @@
         },
         {
             "LEDGroupID": 30,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 192,
@@ -1629,8 +1629,8 @@
         },
         {
             "LEDGroupID": 31,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 216,
@@ -1661,8 +1661,8 @@
         },
         {
             "LEDGroupID": 32,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 240,
@@ -1693,8 +1693,8 @@
         },
         {
             "LEDGroupID": 33,
-            "controllerID": 3,
-            "universe": 1,
+            "controllerID": 1,
+            "universe": 7,
             "type": "8_LED_ring",
             "LedIDs": [
                 264,
@@ -2117,8 +2117,8 @@
         },
         {
             "LEDGroupID": 44,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 0,
@@ -2149,8 +2149,8 @@
         },
         {
             "LEDGroupID": 45,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 24,
@@ -2181,8 +2181,8 @@
         },
         {
             "LEDGroupID": 46,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 48,
@@ -2213,8 +2213,8 @@
         },
         {
             "LEDGroupID": 47,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 72,
@@ -2245,8 +2245,8 @@
         },
         {
             "LEDGroupID": 48,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 96,
@@ -2277,8 +2277,8 @@
         },
         {
             "LEDGroupID": 49,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 120,
@@ -2309,8 +2309,8 @@
         },
         {
             "LEDGroupID": 50,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 144,
@@ -2341,8 +2341,8 @@
         },
         {
             "LEDGroupID": 51,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 168,
@@ -2373,8 +2373,8 @@
         },
         {
             "LEDGroupID": 52,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 192,
@@ -2405,8 +2405,8 @@
         },
         {
             "LEDGroupID": 53,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 216,
@@ -2437,8 +2437,8 @@
         },
         {
             "LEDGroupID": 54,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 240,
@@ -2469,8 +2469,8 @@
         },
         {
             "LEDGroupID": 55,
-            "controllerID": 3,
-            "universe": 2,
+            "controllerID": 1,
+            "universe": 8,
             "type": "8_LED_ring",
             "LedIDs": [
                 264,
@@ -2893,8 +2893,8 @@
         },
         {
             "LEDGroupID": 66,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 0,
@@ -2925,8 +2925,8 @@
         },
         {
             "LEDGroupID": 67,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 24,
@@ -2957,8 +2957,8 @@
         },
         {
             "LEDGroupID": 68,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 48,
@@ -2989,8 +2989,8 @@
         },
         {
             "LEDGroupID": 69,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 72,
@@ -3021,8 +3021,8 @@
         },
         {
             "LEDGroupID": 70,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 96,
@@ -3053,8 +3053,8 @@
         },
         {
             "LEDGroupID": 71,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 120,
@@ -3085,8 +3085,8 @@
         },
         {
             "LEDGroupID": 72,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 144,
@@ -3117,8 +3117,8 @@
         },
         {
             "LEDGroupID": 73,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 168,
@@ -3149,8 +3149,8 @@
         },
         {
             "LEDGroupID": 74,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 192,
@@ -3181,8 +3181,8 @@
         },
         {
             "LEDGroupID": 75,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 216,
@@ -3213,8 +3213,8 @@
         },
         {
             "LEDGroupID": 76,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 240,
@@ -3245,8 +3245,8 @@
         },
         {
             "LEDGroupID": 77,
-            "controllerID": 3,
-            "universe": 3,
+            "controllerID": 1,
+            "universe": 9,
             "type": "8_LED_ring",
             "LedIDs": [
                 264,
@@ -3671,7 +3671,7 @@
     "Controllers": [
         {
             "ControllerID": 1,
-            "ControllerIP": "",
+            "ControllerIP": "255.255.255.255",
             "Description": "Controller in top platform"
         },
         {
