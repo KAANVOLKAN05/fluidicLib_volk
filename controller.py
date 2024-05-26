@@ -8,12 +8,6 @@ from led import *
 
 
 
-# artnet = {}
-# leds = []
-# strands = []
-
-
-
 class Artnet:
 	def __init__(self, leds, ipAddress, controllerId, description):
 		self.ipAddress = ipAddress
