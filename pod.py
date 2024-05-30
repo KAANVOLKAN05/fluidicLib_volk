@@ -6,7 +6,7 @@ import random
 
 BLINK_DEFAULT_ON_DURATION = 0.0
 BLINK_DEFAULT_FADE_IN_DURATION = 3.0
-BLINK_DEFAULT_FADE_OUT_DURATION = 0.1
+BLINK_DEFAULT_FADE_OUT_DURATION = 3.0
 
 POD_TYPE_FLOWER = 1
 POD_TYPE_POD = 2
@@ -50,10 +50,8 @@ def loadPods(loadPath):
     strands[ind] = [i for i in range(len(comp["fixtures"]))]
     i = 0
     for pod in comp["fixtures"]:
-      # Color(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
       c = i%3
       i+=1
-      # Color(255 if c == 0 else 0, 255 if c == 1 else 0, 255 if c == 2 else 0)
       color = Color()
       if(ind == 0):
         color.set(255,0,255)#magenta
@@ -65,6 +63,5 @@ def loadPods(loadPath):
         color.set(255,255,0)#yellow
       
       strands[ind][pod["fixtureID"]] = Pod(pod["fixtureName"], color, toPodType(pod["fixtureType"]), pod["LEDs"])
-    # leds[led["LEDGroupID"]] = LED(led["LedIDs"][0], typeToSize(led["type"]), led["universe"], led["controllerID"])
   f.close()
   return strands

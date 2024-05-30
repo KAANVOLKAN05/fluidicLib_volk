@@ -21,6 +21,8 @@ class LED:
 		self.color.set(c.r, c.g, c.b)
 
 
+# ------ LOADING --
+
 def typeToSize(ledType:str):
 	if ledType == "8_LED_ring":
 		return 8
