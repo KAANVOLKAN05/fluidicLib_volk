@@ -7,6 +7,7 @@ import random
 BLINK_DEFAULT_ON_DURATION = 0.0
 BLINK_DEFAULT_FADE_IN_DURATION = 3.0
 BLINK_DEFAULT_FADE_OUT_DURATION = 3.0
+BLINK_DEFAULT_START_DELAY = 0.0
 
 POD_TYPE_FLOWER = 1
 POD_TYPE_POD = 2
@@ -14,7 +15,7 @@ POD_TYPE_POD = 2
 
 class Pod:
   def __init__(self, name:str, color: Color, podType:int, ledIDs:list):
-    self.name = name
+    self.__name = name
     self.podType = podType
     self.color = FadingColor(color)
     self.ledIDs = ledIDs
@@ -25,12 +26,14 @@ class Pod:
   def setOn(self):
     self.color.setOn()
 
-  def blink(self, fadeInDuration:float = BLINK_DEFAULT_FADE_IN_DURATION, onDuration:float = BLINK_DEFAULT_ON_DURATION, fadeOutDuration:float = BLINK_DEFAULT_FADE_OUT_DURATION, startDelay = 0.0, onEndCallback = None):
+  def blink(self, fadeInDuration:float = BLINK_DEFAULT_FADE_IN_DURATION, onDuration:float = BLINK_DEFAULT_ON_DURATION, fadeOutDuration:float = BLINK_DEFAULT_FADE_OUT_DURATION, startDelay = BLINK_DEFAULT_START_DELAY, onEndCallback = None):
     self.color.fadeInOut(fadeInDuration, onDuration, fadeOutDuration, startDelay, onEndCallback)
 
   def setOnWhite(self):
     self.color.setOnWhite()
-
+  
+  def getName(self):
+    return self.__name
 
 def toPodType(podType:str):
   if podType == "pod":
@@ -53,6 +56,7 @@ def loadPods(loadPath):
       c = i%3
       i+=1
       color = Color()
+      #this is an ugly hack to set the colors for each strand.
       if(ind == 0):
         color.set(255,0,255)#magenta
       elif ind == 1:
