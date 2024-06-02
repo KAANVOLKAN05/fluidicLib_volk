@@ -17,8 +17,8 @@ class Repeater:
 
   def stop(self):
     self.running = False
-    # if self.thread is not None:
-      # self.thread.join()
+    if self.thread:
+      self.thread.join()
 
 
   def run(self):
