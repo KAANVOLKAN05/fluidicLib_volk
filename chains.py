@@ -85,7 +85,8 @@ class Chain(Repeatable):
 			print("Chain ERROR: you should only pass a list (array) or tuple as the constructor arguments. passed type is %s"% (type(elements)) )
 			return
 
-	def setParent(self):
+	def setParent(self, parentChain):
+		self.parentChain = parentChain
 
 	def setNext(self, __next):
 		if self.type == CHAIN_TYPE_PARALLEL:
@@ -191,6 +192,9 @@ class ChainLink(Repeatable):
 		else:
 			return ""
 
+	def setParent(self, parentChain):
+		self.parentChain = parentChain
+		
 	def setNext(self, __next):
 		if __next is None:
 			return
