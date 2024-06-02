@@ -1,5 +1,5 @@
 from controller import *
-from animation import *
+from chains import *
 
 class FluidicLib:
 	def __init__(self, loadpath):
@@ -7,9 +7,9 @@ class FluidicLib:
 		self.controllers = FluidicControllers(loadpath)
 		self.last_update_time = time.time()
 		
-		repeatEveryThreaded(1.0/30, self.update)
+		self.updateThread = repeatEveryThreaded(1.0/30, self.__update)
 
-	def update(self):
+	def __update(self):
 		t = time.time()
 		
 		dt = t - self.last_update_time
@@ -18,6 +18,10 @@ class FluidicLib:
 		self.controllers.updateLedsColors(self.strands)
 		self.controllers.updateArtnet()
 	
+
+	def stop(self):
+		self.updateThread.join()
+
 
 	def turnOnStrand(self, strandIndex):
 		if strandIndex >= len(self.strands) or strandIndex < 0:

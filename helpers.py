@@ -17,4 +17,7 @@ def repeatEvery(delay, task):
 
 
 def repeatEveryThreaded(delay, task):
-  threading.Thread(target=lambda: repeatEvery(delay, task)).start()
+  t = threading.Thread(target=lambda: repeatEvery(delay, task))
+  t.start()
+  return t
+  
