@@ -49,8 +49,12 @@ def joinStringsByLine(st1,  st2, separator = ""):
 			j = j + "\n"
 
 		if i < h1 and i < h2:
-			j = j + lines1[i].rjust(w1) + separator + lines2[i]
+			if len(lines1[i]) > 0 :
+				j = j + lines1[i].rjust(w1) + separator + lines2[i]
+			else:
+				j = j + lines1[i].rjust(w1) + " "*len(separator)  + lines2[i]
 		elif i >= h1:
+			# j = j + pad + " "*len(separator) +lines2[i] 
 			j = j + pad + " "*len(separator) +lines2[i] 
 		elif i >= h2:
 			j = j + lines1[i].rjust(w1) 
