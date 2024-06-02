@@ -6,8 +6,11 @@ class FluidicLib:
 		self.strands = loadPods(loadpath)
 		self.controllers = FluidicControllers(loadpath)
 		self.last_update_time = time.time()
-		
-		self.updateThread = repeatEveryThreaded(1.0/30, self.__update)
+	
+		self.repeater = Repeater(1.0/30, self.__update, True)
+
+	def __del__(self):
+		self.stop()
 
 	def __update(self):
 		t = time.time()
@@ -20,7 +23,8 @@ class FluidicLib:
 	
 
 	def stop(self):
-		self.updateThread.join()
+		if self.repeater:
+			self.repeater.stop()
 
 
 	def turnOnStrand(self, strandIndex):
