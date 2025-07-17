@@ -30,13 +30,17 @@ chain = Chain(([atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (
 # branch1 = Chain([atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO]])
 
 # chain = Chain([seqChain, (atlas[QUARK_DOWN], branch0, branch1)])
+# 1) spin up the updater
+updater = Repeater(1.0/30, update, runThreaded=True)
 
+# 2) register chain‐finished → updater.stop()
+chain._onFinished = updater.stop   # or subclass Chain as shown earlier
 
 chain.printStructure()
 
 # chain.repeatInfinite()
-#chain.repeatTimes(1)
-#chain.start() 
+chain.repeatTimes(1)
+chain.start() 
 
 
 
