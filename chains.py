@@ -27,14 +27,14 @@ class Repeatable:
 	def repeatTimes(self, times: int):
 		self.__repeat = times
 
-	# def repeatInfinite(self):
-	# 	self.__repeat = -1
+	def repeatInfinite(self):
+		self.__repeat = -1
 	
     # def __tryRepeat(self):
         # pass
 
 	def shouldTryRepeat(self):
-		if self.__repeatCounter < self.__repeat:#  or self.__repeat < 0:
+		if self.__repeatCounter < self.__repeat  or self.__repeat < 0:
 			self.__repeatCounter += 1
 			return True
 		return False
