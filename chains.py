@@ -271,7 +271,7 @@ if __name__ == "__main__":
 # chain = Chain(("1", ("2", ("3", "4", "5"), ("6","7","8")), "9"))
 # chain.printStructure()
 # chain = Chain(("1","2\n3\n4\n6","7\n8\n9"))
-	chain.printStructure()
+	#chain.printStructure()
 # print(chain.getStructuredName()[0])
 # chain = Chain(["1", "2", "3", ["4", "5", "6"]])
 # chain = Chain(["1", "2", "3", ["4", "5", "6"]])
