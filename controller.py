@@ -101,7 +101,3 @@ class FluidicControllers:
 			for pod in strand:
 				for i in pod.ledIDs:
 					self.leds[i].setColor(pod.color.get())
-
-
-
-
