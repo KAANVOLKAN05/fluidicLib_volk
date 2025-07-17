@@ -276,6 +276,6 @@ if __name__ == "__main__":
 # chain = Chain(["1", "2", "3", ["4", "5", "6"]])
 # chain = Chain(["1", "2", "3", ["4", "5", "6"]])
 
-	#chain.start() 
+	chain.start() 
 
-	#repeatEvery(1.0/30, update)
+	repeatEvery(1.0/30, update)
