@@ -35,8 +35,8 @@ chain = Chain(([atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (
 chain.printStructure()
 
 # chain.repeatInfinite()
-
-# chain.start() 
+chain.repeatTimes(1)
+chain.start() 
 
 
 
