@@ -32,8 +32,8 @@ chain = Chain(([atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (
 # chain = Chain([seqChain, (atlas[QUARK_DOWN], branch0, branch1)])
 
 
-#chain.printStructure()
-updater = Repeater(1.0/30, update, runThreaded=True)
+chain.printStructure()
+
 # chain.repeatInfinite()
 chain.repeatTimes(1)
 chain.start() 
