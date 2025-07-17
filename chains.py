@@ -34,7 +34,7 @@ class Repeatable:
         # pass
 
 	def shouldTryRepeat(self):
-		if self.__repeatCounter < self.__repeat  or self.__repeat < 0:
+		if self.__repeatCounter < self.__repeat:#  or self.__repeat < 0:
 			self.__repeatCounter += 1
 			return True
 		return False
