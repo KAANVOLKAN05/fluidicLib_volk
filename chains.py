@@ -27,8 +27,8 @@ class Repeatable:
 	def repeatTimes(self, times: int):
 		self.__repeat = times
 
-	# def repeatInfinite(self):
-	# 	self.__repeat = -1
+	def repeatInfinite(self):
+		self.__repeat = -1
 	
     # def __tryRepeat(self):
         # pass
