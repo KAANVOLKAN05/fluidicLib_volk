@@ -37,7 +37,8 @@ chain.printStructure()
 # chain.repeatInfinite()
 chain.repeatTimes(1)
 chain.start() 
-chain.stop()
+
+repeatEvery(1.0/30, update)
 
 
 
