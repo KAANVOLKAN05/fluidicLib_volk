@@ -2,7 +2,7 @@ from FluidicLib import *
 
 
 loadpath = "./final_fixture_description_localhost.json"
-
+#loadpath= "./final_fixture_description.json"
 fluidicLib = FluidicLib(loadpath)
 
 
@@ -17,15 +17,15 @@ atlas = fluidicLib.strands[ATLAS]
 # chainLink.repeatInfinite()
 # chainLink.start()
 
+#originally on was the one below
+#chain = Chain(([atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (atlas[QUARK_UP], atlas[QUARK_DOWN], atlas[PHOTON]), (atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO])), atlas[TAU_NEUTRINO]))
 
-chain = Chain(([atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (atlas[QUARK_UP], atlas[QUARK_DOWN], atlas[PHOTON]), (atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO])), atlas[TAU_NEUTRINO]))
 
-
-# chain = Chain([[atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (atlas[QUARK_UP], atlas[QUARK_DOWN], atlas[PHOTON]), (atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO]))])
+chain = Chain([[atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (atlas[QUARK_UP], atlas[QUARK_DOWN], atlas[PHOTON]), (atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO]))])
 
 # chain = Chain((atlas[QUARK_DOWN], (atlas[QUARK_UP], atlas[QUARK_DOWN], atlas[PHOTON]), (atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO])))
 
-# seqChain = Chain([atlas[ELECTRON], atlas[MUON], atlas[TAU]])
+# seqchain = Chain([atlas[ELECTRON], atlas[MUON], atlas[TAU]])
 # branch0 = Chain((atlas[QUARK_UP], atlas[QUARK_DOWN], atlas[PHOTON]))
 # branch1 = Chain([atlas[W_BOSON], atlas[ELECTRON_NEUTRINO], atlas[MUON_NEUTRINO]])
 
@@ -34,7 +34,7 @@ chain = Chain(([atlas[ELECTRON], atlas[MUON], atlas[TAU]], (atlas[QUARK_DOWN], (
 
 chain.printStructure()
 
-chain.repeatInfinite()
+#chain.repeatInfinite()
 
 chain.start() 
 
